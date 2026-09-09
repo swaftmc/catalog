@@ -128,14 +128,14 @@
     }
     (async () => {
       const [dataUrl, wasmUrl] = await Promise.all([
-        mergeFiles(getParts("Build/2e6b9ad94eed2790c664210defe740da.data.unityweb", 1, 2), "2e6b9ad94eed2790c664210defe740da.data.unityweb"),
-        mergeFiles(getParts("Build/f0058840c570f9f85a2e5851e27b0f70.wasm.unityweb", 1, 2), "f0058840c570f9f85a2e5851e27b0f70.wasm.unityweb")
+        mergeFiles(getParts("Build/TreesHateYou_Web.data.br", 1, 5), "TreesHateYou_Web.data.br"),
+        mergeFiles(getParts("Build/TreesHateYou_Web.wasm.br", 1, 4), "TreesHateYou_Web.wasm.br")
       ]);
       let thegamecanvas = document.querySelector("#unity-canvas");
       let buildUrl = "Build"
       createUnityInstance(thegamecanvas, {
         dataUrl: dataUrl,
-        frameworkUrl: buildUrl + "/6f314fe54fd9b4f06bc4efe696cc6531.framework.js.unityweb",
+        frameworkUrl: buildUrl + "/TreesHateYou_Web.framework.js.br",
         codeUrl: wasmUrl,
         streamingAssetsUrl: "StreamingAssets",
         companyName: "PocketHaven",
